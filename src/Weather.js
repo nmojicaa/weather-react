@@ -16,7 +16,14 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       wind: response.data.wind.speed,
       city: response.data.name,
+      icon: response.data.weather[0].icon,
     });
+  }
+
+  function search() {
+    const apiKey = "627a89o6b1bb020733c9dbf0b346f6t2";
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}}&key=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
   }
 
   function handleSubmit(event) {
@@ -28,16 +35,10 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
-  function search() {
-    const apiKey = "22f56e2b46e01f373930322b649479c4";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
-  }
-
   if (weatherData.ready) {
     return (
       <div className="Weather">
-        <form onSumbit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-9">
               <input
