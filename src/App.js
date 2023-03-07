@@ -12,8 +12,7 @@ export default function App() {
           <a
             href="https://github.com/nmojicaa/weather-react"
             target="_blank"
-            className="footer"
-            rel="norefferrer"
+            rel="noreferrer"
           >
             open-sourced on Guthub
           </a>
