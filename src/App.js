@@ -6,8 +6,8 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <Weather defaultCity="New York" />
-        <footer>
+        <Weather defaultCity="Paris" />
+        <footer className="footer-copy">
           This project was coded by Nataia Mojica and it is {""}
           <a
             href="https://github.com/nmojicaa/weather-react"
