@@ -9,7 +9,15 @@ export default function App() {
       <div className="container">
         <Weather defaultCity="New York" />
         <footer>
-          This project was coded by Nataia Mojica and is open-sourced on Guthub
+          This project was coded by Nataia Mojica and it is {""}
+          <a
+            href="https://github.com/nmojicaa/weather-react"
+            target="_blank"
+            className="footer"
+            rel="norefferrer"
+          >
+            open-sourced on Guthub
+          </a>
         </footer>
       </div>
     </div>
